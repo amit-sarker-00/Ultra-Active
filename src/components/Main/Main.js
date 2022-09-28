@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSprout } from "@fortawesome/free-solid-svg-icons";
 import { ToastContainer, toast } from "react-toastify";
 import Fitness from "../Fitness/Fitness";
+import Question from "../Question/Question";
 
 const Main = () => {
   const showToastMessage = () => {
@@ -59,22 +60,19 @@ const Main = () => {
             <button>25s</button>
             <button>45s</button>
             <button>55s</button>
-            {/* <h2>5s</h2>
-            <h2>15s</h2>
-            <h2>25s</h2>
-            <h2>40s</h2>
-            <h2>50s</h2> */}
           </div>
         </div>
         <div className="exercise">
           <h3>Exercise Section</h3>
-          <div>
-            <h3>Exercise Time :</h3>
-            <input type="text" name="" id="" placeholder="seconds" />
+          <div className="break-seconds">
+            <h4>
+              Exercise Time <small>0 seconds</small>
+            </h4>
           </div>
-          <div>
-            <h3>Break Time :</h3>
-            <input type="text" name="" id="" placeholder="seconds" />
+          <div className="break-seconds">
+            <h4>
+              Break Time <small>0 seconds</small>
+            </h4>
           </div>
         </div>
         <div className="btn">
@@ -82,6 +80,7 @@ const Main = () => {
           <ToastContainer></ToastContainer>
         </div>
       </div>
+      <Question></Question>
     </div>
   );
 };
