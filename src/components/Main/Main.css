@@ -1,15 +1,75 @@
 .main-container {
   display: grid;
   grid-template-columns: 4fr 1fr;
+  background-color: #e6e6e6;
 }
-.container {
-  background-color: gray;
+.main-container .container {
+  background-color: white;
   margin-top: 100px;
 }
 .container h2 {
   color: blue;
   font-weight: bold;
+  margin-bottom: 50px;
 }
 .right-container {
-  background-color: darkseagreen;
+  background-color: white;
 }
+.my-info {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-left: 25px;
+}
+
+.my-info img {
+  height: 60px;
+  width: 60px;
+  border-radius: 30%;
+}
+.personal-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: lightgray;
+  border-radius: 10px;
+  margin-right: 30px;
+  justify-content: center;
+  text-align: center;
+  margin-left: 25px;
+}
+/* .break-section {
+  margin-left: 25px;
+  margin-right: 30px;
+}
+.break-section .break {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+  background-color: lightgray;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+.break button {
+  background-color: white;
+  border-radius: 50px;
+}
+.exercise {
+  margin-left: 25px;
+  margin-right: 30px;
+}
+.exercise input {
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+.btn {
+  background-color: blue;
+  border-radius: 8px;
+  color: white;
+  margin-left: 25px;
+  margin-top: 30px;
+} */
