@@ -1,0 +1,17 @@
+.cart-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+@media screen and (max-width: 992px) {
+  .cart-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 576px) {
+  .cart-details {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
