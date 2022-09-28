@@ -42,6 +42,35 @@ const Main = () => {
             </p>
           </div>
         </div>
+        <div className="break-section">
+          <h3>Add A Break</h3>
+          <div className="break">
+            <button>5s</button>
+            <button>15s</button>
+            <button>25s</button>
+            <button>45s</button>
+            <button>55s</button>
+            {/* <h2>5s</h2>
+            <h2>15s</h2>
+            <h2>25s</h2>
+            <h2>40s</h2>
+            <h2>50s</h2> */}
+          </div>
+        </div>
+        <div className="exercise">
+          <h3>Exercise Section</h3>
+          <div>
+            <h3>Exercise Time :</h3>
+            <input type="text" name="" id="" placeholder="seconds" />
+          </div>
+          <div>
+            <h3>Break Time :</h3>
+            <input type="text" name="" id="" placeholder="seconds" />
+          </div>
+        </div>
+        <div className="btn">
+          <h4>Activity Completed</h4>
+        </div>
       </div>
     </div>
   );
