@@ -2,7 +2,14 @@ import React from "react";
 import "./Main.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSprout } from "@fortawesome/free-solid-svg-icons";
+import { ToastContainer, toast } from "react-toastify";
+
 const Main = () => {
+  const showToastMessage = () => {
+    toast.success("Hurrah! I have done it.", {
+      position: toast.POSITION.TOP_CENTER,
+    });
+  };
   return (
     <div className="main-container">
       <div className="container">
@@ -69,7 +76,8 @@ const Main = () => {
           </div>
         </div>
         <div className="btn">
-          <h4>Activity Completed</h4>
+          <h4 onClick={showToastMessage}>Activity Completed</h4>
+          <ToastContainer></ToastContainer>
         </div>
       </div>
     </div>
