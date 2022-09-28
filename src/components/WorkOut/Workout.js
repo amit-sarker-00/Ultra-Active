@@ -2,12 +2,15 @@ import React from "react";
 import "./Workout.css";
 const Workout = (props) => {
   //   console.log(props);
-  const { picture, age, name, time } = props.fit;
+  const { picture, age, name, time, describe } = props.fit;
   return (
     <div className="cart">
       <img className="img" src={picture} alt="" />
       <div>
-        <h2>Name:{name}</h2>
+        <h3>Name:{name}</h3>
+        <p>
+          <small>{describe}</small>
+        </p>
         <p>
           <strong>For Age:{age}</strong>
         </p>
