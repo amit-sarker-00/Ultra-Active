@@ -3,6 +3,7 @@ import "./Main.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSprout } from "@fortawesome/free-solid-svg-icons";
 import { ToastContainer, toast } from "react-toastify";
+import Fitness from "../Fitness/Fitness";
 
 const Main = () => {
   const showToastMessage = () => {
@@ -17,6 +18,7 @@ const Main = () => {
           <FontAwesomeIcon icon={faSprout} /> FITNESS CLUB
         </h2>
         <h4>Select Today's Choice</h4>
+        <Fitness></Fitness>
       </div>
       <div className="right-container">
         <div className="my-info">
