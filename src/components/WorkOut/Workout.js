@@ -19,10 +19,11 @@ const Workout = (props) => {
           <strong>Time Required :{time}</strong>
         </p>
       </div>
-      <button className="cart-btn">Add To LIst</button>
+      <button className="cart-btn" onClick={() => props.clickHandel(time)}>
+        Add To LIst
+      </button>
     </div>
   );
 };
 
 export default Workout;
-// onClick={() => props.clickHandel(time)}

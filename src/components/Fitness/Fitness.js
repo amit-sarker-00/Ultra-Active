@@ -3,27 +3,21 @@ import Workout from "../WorkOut/Workout";
 import "./Fitness.css";
 
 // fake data
-const Fitness = () => {
+const Fitness = ({ clickHandel }) => {
   const [datas, setDatas] = useState([]);
-  // const [cart, setCart] = useState([]);
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
       .then((data) => setDatas(data));
   }, []);
-  // const clickHandel = (fit) => {
-  //   console.log(fit);
-  //   const newCart = [...cart, fit];
-  //   setCart(newCart);
-  // };
+
   return (
     <div className="cart-details">
       {datas.map((fit) => (
-        <Workout key={fit.id} fit={fit}></Workout>
+        <Workout key={fit.id} fit={fit} clickHandel={clickHandel}></Workout>
       ))}
     </div>
   );
 };
 
 export default Fitness;
-// clickHandel={clickHandel}

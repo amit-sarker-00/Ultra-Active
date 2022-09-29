@@ -1,20 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Cart.css";
 import { ToastContainer, toast } from "react-toastify";
 import Break from "../Break/Break";
 
-const Cart = () => {
+const Cart = ({ x }) => {
+  const [times, setTimes] = useState([]);
   const showToastMessage = () => {
     toast.success("Hurrah! I have done it.", {
       position: toast.POSITION.TOP_CENTER,
     });
   };
   const breakTime = [
-    { id: 1, time: "5s" },
-    { id: 2, time: "15s" },
-    { id: 3, time: "25s" },
-    { id: 4, time: "35s" },
+    { id: 1, time: "15 second" },
+    { id: 2, time: "25 second" },
+    { id: 3, time: "35 second" },
+    { id: 4, time: "55 second" },
   ];
+  const clickBreakButton = (time) => {
+    // const newTime = [...times, time];
+    setTimes(time);
+    const x = localStorage.getItem("time");
+    const y = JSON.parse(x);
+    if (!y) {
+      localStorage.setItem("time", JSON.stringify([time]));
+      return;
+    } else {
+      const a = y.find((i) => i.id === time.id);
+      console.log(a);
+
+      localStorage.setItem("time", JSON.stringify([time]));
+    }
+  };
   return (
     <div>
       <div className="my-info">
@@ -48,11 +64,14 @@ const Cart = () => {
         </div>
       </div>
       <div className="break-section">
-        <h3>Add A Break</h3>
         <div className="break">
           <h3>Add A Break</h3>
           {breakTime.map((time) => (
-            <Break key={time.id} time={time}></Break>
+            <Break
+              key={time.id}
+              time={time}
+              clickBreakButton={clickBreakButton}
+            ></Break>
           ))}
         </div>
       </div>
@@ -60,12 +79,12 @@ const Cart = () => {
         <h3>Exercise Section</h3>
         <div className="break-seconds">
           <h4>
-            Exercise Time <small>0 seconds</small>
+            Exercise Time <small>{x} second</small>
           </h4>
         </div>
         <div className="break-seconds">
           <h4>
-            Break Time <small>0 seconds</small>
+            Break Time <small> {times}</small>
           </h4>
         </div>
       </div>
