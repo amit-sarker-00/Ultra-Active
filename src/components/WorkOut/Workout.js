@@ -2,7 +2,8 @@ import React from "react";
 import "./Workout.css";
 const Workout = (props) => {
   //   console.log(props);
-  const { picture, age, name, time, describe } = props.fit;
+  const { picture, age, name, describe, time } = props.fit;
+  // const { clickHandel } = props;
   return (
     <div className="cart">
       <img className="img" src={picture} alt="" />
@@ -24,3 +25,4 @@ const Workout = (props) => {
 };
 
 export default Workout;
+// onClick={() => props.clickHandel(time)}
