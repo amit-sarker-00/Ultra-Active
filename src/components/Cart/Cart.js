@@ -3,7 +3,7 @@ import "./Cart.css";
 import { ToastContainer, toast } from "react-toastify";
 import Break from "../Break/Break";
 
-const Cart = ({ x }) => {
+const Cart = ({ listTime }) => {
   const [times, setTimes] = useState([]);
   const showToastMessage = () => {
     toast.success("Hurrah! I have done it.", {
@@ -79,7 +79,7 @@ const Cart = ({ x }) => {
         <h3>Exercise Section</h3>
         <div className="break-seconds">
           <h4>
-            Exercise Time <small>{x} second</small>
+            Exercise Time <small>{listTime} second</small>
           </h4>
         </div>
         <div className="break-seconds">

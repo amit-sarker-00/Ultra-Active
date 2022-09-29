@@ -9,11 +9,11 @@ import { useState } from "react";
 const Main = () => {
   const [cart, setCart] = useState([]);
   const clickHandel = (fit) => {
-    const x = parseInt(fit.slice(0, 2));
-    const newCart = [...cart, x];
+    const listTime = parseInt(fit.slice(0, 2));
+    const newCart = [...cart, listTime];
     setCart(newCart);
   };
-  const x = cart?.reduce((previous, current) => previous + current, 0);
+  const listTime = cart?.reduce((previous, current) => previous + current, 0);
   return (
     <div className="main-container">
       <div className="container">
@@ -24,7 +24,7 @@ const Main = () => {
         <Fitness clickHandel={clickHandel}></Fitness>
       </div>
       <div className="right-container">
-        <Cart x={x}></Cart>
+        <Cart listTime={listTime}></Cart>
       </div>
       <Question></Question>
     </div>
